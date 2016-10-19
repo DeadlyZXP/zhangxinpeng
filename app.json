@@ -1,0 +1,54 @@
+{
+  "pages":[
+    "pages/ihutao/index/index",
+    "pages/ihutao/list/list",
+    "pages/ihutao/car/car",
+    "pages/ihutao/community/community",
+    "pages/ihutao/my/my",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "胡淘",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#e51755",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/ihutao/index/index",
+        "text": "海外淘",
+        "iconPath": "image/footer1.png",
+        "selectedIconPath": "image/footer01.png"
+      },
+      {
+        "pagePath": "pages/ihutao/list/list",
+        "text": "分类",
+        "iconPath": "image/footer2.png",
+        "selectedIconPath": "image/footer02.png"
+      },
+      {
+        "pagePath": "pages/ihutao/community/community",
+        "iconPath": "image/shequ01.png",
+        "selectedIconPath": "image/shequ.png",
+        "text": "社区"
+      },
+      {
+        "pagePath": "pages/ihutao/car/car",
+        "iconPath": "image/gouwuche1.png",
+        "selectedIconPath": "image/gouweuche01.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/ihutao/my/my",
+        "iconPath": "image/wode.png",
+        "selectedIconPath": "image/wode01.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

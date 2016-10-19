@@ -1,0 +1,30 @@
+.list-body{
+  width:100%;
+  height: 100%;
+  display: flex;
+  .list-left{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    li{
+      width: 100%;
+      height: 14%;
+      border-top: solid 0.5px white;
+      background: #e51755;
+      text-align: center;
+      font-size: 16px;
+      color: white;
+    }
+  }
+  .list-right{
+    width: 70%;
+    background: yellow;
+
+    
+  }
+}
+page {
+  height: 100%;
+}

@@ -1,0 +1,449 @@
+<view class="list-body">
+    <ul class="list-left">
+      <li class="{{current == 0 ? 'active' : ''}}" catchtap="switchSlider" data-index="0">澳洲站</li>
+      <li class="{{current == 1 ? 'active' : ''}}" catchtap="switchSlider" data-index="1">新西兰站</li>
+      <li class="{{current == 2 ? 'active' : ''}}" catchtap="switchSlider" data-index="2">韩国站</li>
+      <li class="{{current == 3 ? 'active' : ''}}" catchtap="switchSlider" data-index="3">日本站</li>
+      <li class="{{current == 4 ? 'active' : ''}}" catchtap="switchSlider" data-index="4">德国站</li>
+      <li class="{{current == 5 ? 'active' : ''}}" catchtap="switchSlider" data-index="5">美国站</li>
+      <li class="{{current == 6 ? 'active' : ''}}" catchtap="switchSlider" data-index="6">全部国家</li>
+    </ul>
+    <scroll-view class="list-right" scroll-y="true">
+      <swiper style="width:100%;height:1700px;"  indicator-dots="{{swiper.indicatorDots}}" autoplay="{{swiper.autoplay}}" interval="{{swiper.interval}}" duration="{{swiper.duration}}" current="{{current}}" bindchange="changeSlider">
+        <swiper-item>
+          <div class="listTop">
+            <p>妈咪宝贝 Mummy Body</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Mlist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>保健 Healthy Life</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Hlist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>护肤美妆 Beauty</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Blist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>美食佳 Gastronome</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Glist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>生活 LifeStyle</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Llist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>更多 More</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{LList}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+        </swiper-item>
+        <swiper-item>
+          <div class="listTop">
+            <p>保健 Healthy Life</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Hlist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>妈咪宝贝 Mummy Body</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Mlist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>护肤美妆 Beauty</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Blist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>美食佳 Gastronome</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Glist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>生活 LifeStyle</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Llist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>更多 More</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{LList}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+        </swiper-item>
+        <swiper-item>
+          <div class="listTop">
+            <p>护肤美妆 Beauty</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Blist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>妈咪宝贝 Mummy Body</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Mlist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>保健 Healthy Life</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Hlist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>美食佳 Gastronome</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Glist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>生活 LifeStyle</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Llist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>更多 More</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{LList}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+        </swiper-item>
+        <swiper-item>
+          <div class="listTop">
+            <p>护肤美妆 Beauty</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Blist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>妈咪宝贝 Mummy Body</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Mlist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>保健 Healthy Life</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Hlist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>美食佳 Gastronome</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Glist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>生活 LifeStyle</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Llist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>更多 More</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{LList}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+        </swiper-item>
+        <swiper-item>
+          <div class="listTop">
+            <p>美食佳 Gastronome</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Glist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>妈咪宝贝 Mummy Body</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Mlist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>保健 Healthy Life</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Hlist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>护肤美妆 Beauty</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Blist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>生活 LifeStyle</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Llist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>更多 More</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{LList}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+        </swiper-item>
+        <swiper-item>
+          <div class="listTop">
+            <p>保健 Healthy Life</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Hlist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>护肤美妆 Beauty</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Blist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>妈咪宝贝 Mummy Body</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Mlist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>美食佳 Gastronome</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Glist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>生活 LifeStyle</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Llist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>更多 More</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{LList}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+        </swiper-item>
+        <swiper-item>
+          <div class="listTop">
+            <p>妈咪宝贝 Mummy Body</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Mlist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>保健 Healthy Life</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Hlist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>护肤美妆 Beauty</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Blist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>美食佳 Gastronome</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Glist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>生活 LifeStyle</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{Llist}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+          <div class="listTop">
+            <p>更多 More</p>
+            <image src="/image/kinds8.png"></image>
+          </div>
+          <ul class="list">
+            <li wx:for="{{LList}}" wx:for-item="item">
+              <div><image src="{{item.img}}" mode="aspectFill"></image></div>
+              <p>{{item.tittle}}</p>
+            </li>
+          </ul>
+        </swiper-item>
+      </swiper>
+    </scroll-view>
+</view>

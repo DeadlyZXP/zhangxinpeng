@@ -1,0 +1,125 @@
+<view class="main-container">
+  <scroll-view scroll-y="true">
+    <swiper class="banner" indicator-dots="true" autoplay="true">
+      <swiper-item>
+        <image src="/image/20160713171532970.jpg" mode="aspectFill"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="/image/20160713150013685.jpg" mode="aspectFill"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="/image/20160715170216843.jpg" mode="aspectFill"></image>
+      </swiper-item>
+    </swiper>
+
+    <ul class="nav">
+      <li>
+        <a href="">
+          <image src="/image/my.png"></image>
+          <span>妈咪宝贝</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <image src="/image/bj.png"></image>
+          <span>保健</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <image src="/image/life.png"></image>
+          <span>生活</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <image src="/image/all.png"></image>
+          <span>全部</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="hot-sale">
+      <div class="hot-sale=left">
+        <span>今日开淘</span>
+        <span class="span-text1">限时热卖，海外直购</span>
+      </div>
+      <div class="hot-sale-right">
+        <a href="#">更多</a>
+      </div>
+    </div>
+    <view class="adver">
+      <view class="adver-left">
+        <p class="p-text1">秒杀</p>
+        <p>距结束还有</p>
+      </view>
+      <view class="adver-right">
+        <image src="/image/20160926115004687.jpg" mode="aspectFill"></image>
+        <p>
+          <b>￥369.00</b>
+          <s>￥598.00</s>
+        </p>
+      </view>
+    </view>
+    <ul class="today-sale-list">
+      <li wx:for="{{list}}" wx:for-item="item">
+        <image src="{{item.img}}" mode="aspectFill"></image>
+        <p>
+          <span class="p-textSale1">{{item.newprice}}</span>
+          <span class="p-textSale2">
+            <i>{{item.rebate}}</i>
+            <b>折</b>
+          </span>
+          <span class="p-textSale3">{{item.oldprice}}</span>
+        </p>
+      </li>
+    </ul>
+
+    <div class="hot-sale">
+      <div class="hot-sale=left">
+        <span>热卖场</span>
+        <span class="span-text1">限时热卖，海外直购</span>
+      </div>
+      <div class="hot-sale-right">
+        <a href="#">更多</a>
+      </div>
+    </div>
+
+    <view class="adver-next">
+      <image src="/image/foreign.jpg" mode="aspectFill"></image>
+    </view>
+
+    <ul class="country-list">
+      <li wx:for="{{countryList}}" wx:for-item="item">
+        <image src="{{item.img}}" mode="aspectFill"></image>
+      </li>
+    </ul>
+
+    <div class="now-sale">
+      <div class="now-sale-left">
+        <span class="{{current == 0 ? 'now-sale-active' : ''}}" catchtap="switchSlider" data-index="0">正在进行</span>
+        <span class="{{current == 1 ? 'now-sale-active' : ''}}" catchtap="switchSlider" data-index="1">即将开始</span>
+      </div>
+      <div class="now-sale-right">
+        <span>更多</span>
+      </div>
+    </div>
+
+    <swiper class="main-list" indicator-dots="{{swiper.indicatorDots}}" autoplay="{{swiper.autoplay}}" interval="{{swiper.interval}}" duration="{{swiper.duration}}" current="{{current}}" bindchange="changeSlider">
+            <swiper-item>
+                <ul class="main-list-ul">
+                  <li wx:for="{{nowSaleList}}" wx:for-item="item">
+                    <image src="{{item.img}}" mode="aspectFill"></image>
+                    <span>
+                      <b class="main-b1">{{item.title}}</b>
+                      <b class="main-b2">{{item.time}}</b>
+                    </span>
+                  </li>
+                </ul>
+            </swiper-item>
+            <swiper-item>
+
+            </swiper-item>
+    </swiper>
+  </scroll-view>
+</view>
